@@ -42,6 +42,18 @@ Speedlab keeps the reference and candidate paths side by side:
 
 The MLX path uses Qwen3-VL-2B at 8-bit precision. In E017 it reduced fresh nine-statement median latency by 27.6% (358.5→259.6 ms); an exact replication measured 25.0% (281.7→211.3 ms). It matched all 84 fixed-suite decisions and stayed within 0.039 maximum probability drift, but the suite is small and covers one machine. Treat it as an experimental Apple-specific alternative, not a general replacement for Glance.
 
+The accepted scorer has also been [upstreamed into Glance](https://github.com/yoheinakajima/glance/pull/1) as a pinned,
+optional experimental runtime. From a current Glance source checkout, the same native Python, CLI and server APIs work with:
+
+```bash
+uv sync --extra mlx
+uv run glance ask photo.jpg "Is there a dog?" --backend mlx
+uv run glance serve --backend mlx --preload vlm
+```
+
+That packaged path additionally supports letter choices, ratings, context and one to four images. Speedlab keeps its smaller
+adapter because it is useful for live A/B testing and preserves the exact E017 experiment implementation.
+
 ## Quick start
 
 ### Requirements

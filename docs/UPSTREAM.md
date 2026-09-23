@@ -2,6 +2,19 @@
 
 This file prevents useful general work from getting stranded in the lab while keeping speculative experiments out of stable repositories.
 
+## 2026-09-23 promotion update
+
+The 8-bit MLX direct scorer and selected-row readout were promoted to core Glance in
+[PR #1](https://github.com/yoheinakajima/glance/pull/1), after a package-level gate was registered in core before implementation.
+The packaged backend kept the request field `"model": "vlm"`, added an explicit `--backend mlx` / `Glance(backend="mlx")`
+runtime selector, and left PyTorch as the default. Its acceptance run matched 84/84 decisions, held maximum probability drift
+to 0.039, and reduced fresh-frame p50 by 22.9% (484.6→373.6 ms, 1.297×) on the same M5 / 32 GB machine. The packaged scope also
+smoke-tested letter choices, ratings, context and two images. It remains experimental: larger labeled parity, sustained load,
+more Apple Silicon generations and a lower-memory machine are still open.
+
+Speedlab retains the camera UI, A/B routing, telemetry, temporal gate and exact historical scorer. The rejected 4-bit, uniform
+token-reduction, compilation and untrained-depth variants remain lab-only.
+
 ## Release decision for v0.1.0
 
 - **Already global in Glance:** direct logit scoring, shared image-prefix work, and one native request containing every question about a frame. Speedlab measured the existing multi-question path at 2.405× faster than four cold sequential requests; there is no new core patch to claim for that result.
@@ -23,8 +36,8 @@ The first upstream contribution from this release is documentation: the main Gla
 | Aspect-ratio-safe low token caps | `glance` | E012: budget 64 fails on all tall-receipt attempts because processor rounding emits 77 tokens | Bug/UX candidate; define whether caps round up or resize again |
 | 2B→4B uncertainty cascade | `glance` or this lab | E011: 2B is 2.994× faster but fixed quality guardrail fails | Research candidate; needs coverage-risk protocol |
 | Loaded model profile in demo health | `glance-vlm-demos` | Prevents runs from silently mixing tier/token configurations | Implemented locally by joining `/healthz` and `/v1/models` |
-| MLX 8-bit direct backend | `glance` after larger parity/sustained testing; otherwise this lab | E017: 1.381× fresh-frame speedup, 84/84 decisions, max probability drift 0.039 | Implemented as opt-in Speedlab backend |
-| MLX selected-row statement scorer | `glance` | E016/E017: same prompts/margins, one multimodal prefix, batched suffixes, selected token rows | Upstream design candidate; preserve diagnostics contract |
+| MLX 8-bit direct backend | `glance` (experimental) plus this lab | E017: 1.381× prototype speedup; packaged gate: 1.297×, 84/84 decisions, max probability drift 0.039 | Upstreamed in Glance PR #1; remains opt-in |
+| MLX selected-row statement scorer | `glance` | E016/E017: same prompts/margins, one multimodal prefix, batched suffixes, selected token rows | Upstreamed in Glance PR #1; full-vocabulary diagnostics intentionally remain unavailable on this optimized path |
 | Uniform sub-floor MLX token caps | this lab only | E019: 15.6% faster at 40–45 tokens, but changed tone and drifted 0.411 | Rejected |
 | Untrained decoder truncation | this lab only | E020/E021: 6–22% faster, but every 20–27-layer arm failed probability or decision gates | Rejected; trained head required |
 
