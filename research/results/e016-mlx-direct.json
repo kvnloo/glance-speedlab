@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "experiment": "E016",
+  "hardware": "Apple M5, 10-core GPU, 32 GB unified memory",
+  "reference": {
+    "backend": "Glance PyTorch MPS FP16",
+    "wall_ms": {"n": 21, "p50": 503.43, "p95": 516.4, "mean": 504.368},
+    "prefix_ms": {"n": 21, "p50": 227.0, "p95": 235.0, "mean": 226.524},
+    "score_ms": {"n": 21, "p50": 275.0, "p95": 284.0, "mean": 275.905}
+  },
+  "candidate": {
+    "backend": "MLX 4-bit direct statement scoring",
+    "wall_ms": {"n": 21, "p50": 367.3, "p95": 383.233, "mean": 369.243},
+    "prefix_ms": {"n": 21, "p50": 178.304, "p95": 187.804, "mean": 177.839},
+    "suffix_ms": {"n": 21, "p50": 165.735, "p95": 168.971, "mean": 166.119},
+    "cache_copy_ms": {"n": 21, "p50": 6.187, "p95": 7.21, "mean": 5.148},
+    "head_ms": {"n": 21, "p50": 0.277, "p95": 1.096, "mean": 0.42},
+    "peak_memory_gb": 2.726,
+    "speedup": 1.3706,
+    "latency_reduction_percent": 27.0
+  },
+  "shared_path_validation_max_z_delta": 0.20606151,
+  "guardrail": {
+    "decisions_equal": true,
+    "question_decision_agreement": 1.0,
+    "max_probability_delta": 0.36061977,
+    "max_z_delta": 3.08893243,
+    "passed": false
+  },
+  "backend_candidate": false
+}

@@ -1,0 +1,32 @@
+name: Experiment proposal
+description: Propose a measurable performance or quality experiment.
+title: "Experiment: "
+labels: [experiment]
+body:
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis and mechanism
+      description: State the falsifiable claim and why it may work.
+    validations:
+      required: true
+  - type: textarea
+    id: protocol
+    attributes:
+      label: Protocol
+      description: Include baseline, variant, warmups, sample count, and stopping rule.
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Primary metric and quality guardrail
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Hardware, OS, Glance version, model revision, device, and dtype.
+    validations:
+      required: true

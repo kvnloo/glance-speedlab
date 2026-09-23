@@ -1,0 +1,1 @@
+git+https://github.com/Blaizzy/mlx-vlm.git@b5952d7c97da3cfc5014ff0a81bfe2e59d919cab

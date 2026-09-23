@@ -1,0 +1,303 @@
+{
+  "environment": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+    "hardwareConcurrency": 10,
+    "deviceMemory": 32
+  },
+  "timestamp": "2026-09-23T05:33:05.464Z",
+  "experiments": {
+    "E004": {
+      "config": {
+        "width": 320,
+        "height": 180,
+        "jpegQuality": 0.6,
+        "warmups": 20,
+        "iterations": 200
+      },
+      "persistent_ms": {
+        "n": 200,
+        "min": 0.2,
+        "p50": 0.3,
+        "p90": 0.4,
+        "p95": 0.4,
+        "max": 6.9,
+        "mean": 0.357
+      },
+      "allocate_each_frame_ms": {
+        "n": 200,
+        "min": 0.2,
+        "p50": 0.3,
+        "p90": 0.4,
+        "p95": 0.5,
+        "max": 1.1,
+        "mean": 0.353
+      },
+      "p50_speedup": 1,
+      "p95_speedup": 1.25,
+      "allocations_avoided_per_frame": 2,
+      "guardrail": {
+        "decodedGeometryIdentical": true,
+        "passed": true
+      }
+    },
+    "E005": {
+      "config": {
+        "warmups": 20,
+        "iterations": 300,
+        "modelBudgetMs": 150
+      },
+      "variants": {
+        "160": {
+          "jpegBytes": 1855,
+          "requestBytes": 2618,
+          "base64_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0.1,
+            "p95": 0.1,
+            "max": 0.3,
+            "mean": 0.048
+          },
+          "stringify_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0,
+            "p95": 0,
+            "max": 0.1,
+            "mean": 0.002
+          },
+          "parse_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0,
+            "p95": 0,
+            "max": 0.1,
+            "mean": 0
+          },
+          "combined_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0.1,
+            "p95": 0.1,
+            "max": 0.3,
+            "mean": 0.051
+          },
+          "share_of_150ms_p50_pct": 0,
+          "share_of_150ms_p95_pct": 0.067,
+          "guardrail": {
+            "decodedByteLengthIdentical": true,
+            "passed": true
+          }
+        },
+        "224": {
+          "jpegBytes": 2343,
+          "requestBytes": 3266,
+          "base64_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0.1,
+            "p90": 0.1,
+            "p95": 0.1,
+            "max": 0.2,
+            "mean": 0.055
+          },
+          "stringify_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0,
+            "p95": 0,
+            "max": 0.1,
+            "mean": 0.002
+          },
+          "parse_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0,
+            "p95": 0,
+            "max": 0.1,
+            "mean": 0.001
+          },
+          "combined_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0.1,
+            "p90": 0.1,
+            "p95": 0.2,
+            "max": 0.2,
+            "mean": 0.059
+          },
+          "share_of_150ms_p50_pct": 0.067,
+          "share_of_150ms_p95_pct": 0.133,
+          "guardrail": {
+            "decodedByteLengthIdentical": true,
+            "passed": true
+          }
+        },
+        "320": {
+          "jpegBytes": 3226,
+          "requestBytes": 4446,
+          "base64_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0.1,
+            "p95": 0.1,
+            "max": 0.3,
+            "mean": 0.055
+          },
+          "stringify_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0,
+            "p95": 0,
+            "max": 0.1,
+            "mean": 0.002
+          },
+          "parse_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0,
+            "p95": 0,
+            "max": 0.1,
+            "mean": 0.001
+          },
+          "combined_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0.1,
+            "p90": 0.1,
+            "p95": 0.1,
+            "max": 0.3,
+            "mean": 0.059
+          },
+          "share_of_150ms_p50_pct": 0.067,
+          "share_of_150ms_p95_pct": 0.067,
+          "guardrail": {
+            "decodedByteLengthIdentical": true,
+            "passed": true
+          }
+        },
+        "448": {
+          "jpegBytes": 4123,
+          "requestBytes": 5642,
+          "base64_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0.1,
+            "p95": 0.1,
+            "max": 0.3,
+            "mean": 0.051
+          },
+          "stringify_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0,
+            "p95": 0,
+            "max": 0.1,
+            "mean": 0.003
+          },
+          "parse_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0,
+            "p90": 0,
+            "p95": 0,
+            "max": 0.1,
+            "mean": 0.002
+          },
+          "combined_ms": {
+            "n": 300,
+            "min": 0,
+            "p50": 0.1,
+            "p90": 0.1,
+            "p95": 0.1,
+            "max": 0.3,
+            "mean": 0.055
+          },
+          "share_of_150ms_p50_pct": 0.067,
+          "share_of_150ms_p95_pct": 0.067,
+          "guardrail": {
+            "decodedByteLengthIdentical": true,
+            "passed": true
+          }
+        }
+      },
+      "materialAt320": false
+    },
+    "E007": {
+      "config": {
+        "thresholds": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "seeds": 10,
+        "frames": 300,
+        "cameraFps": 30,
+        "maxStaleFrames": 30,
+        "modelMs": 207
+      },
+      "variants": {
+        "1": {
+          "triggerCount": 270,
+          "inferenceHz": 2.7,
+          "computeReductionPct": 91,
+          "effectiveAnswerHz": 30,
+          "answerHzMultiplierVsFreshInference": 6.21,
+          "guardrail": {
+            "abruptRecall": 1,
+            "gradualRecall": 1,
+            "passed": true
+          }
+        },
+        "2": {
+          "triggerCount": 192,
+          "inferenceHz": 1.92,
+          "computeReductionPct": 93.6,
+          "effectiveAnswerHz": 30,
+          "answerHzMultiplierVsFreshInference": 6.21,
+          "guardrail": {
+            "abruptRecall": 1,
+            "gradualRecall": 1,
+            "passed": true
+          }
+        },
+        "4": {
+          "triggerCount": 147,
+          "inferenceHz": 1.47,
+          "computeReductionPct": 95.1,
+          "effectiveAnswerHz": 30,
+          "answerHzMultiplierVsFreshInference": 6.21,
+          "guardrail": {
+            "abruptRecall": 1,
+            "gradualRecall": 1,
+            "passed": true
+          }
+        },
+        "8": {
+          "triggerCount": 120,
+          "inferenceHz": 1.2,
+          "computeReductionPct": 96,
+          "effectiveAnswerHz": 30,
+          "answerHzMultiplierVsFreshInference": 6.21,
+          "guardrail": {
+            "abruptRecall": 1,
+            "gradualRecall": 1,
+            "passed": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "experiment": "E020",
+  "hardware": "Apple M5, 10-core GPU, 32 GB unified memory",
+  "model": "mlx-community/Qwen3-VL-2B-Instruct-8bit@b0338e0e843d8e1befe873d144b81fefdc47efa6",
+  "protocol": {"warmups": 3, "repeats_per_image": 10, "statements": 9},
+  "arms": {
+    "28": {
+      "wall_ms": {"n": 30, "p50": 375.657, "p95": 389.294, "mean": 376.837},
+      "prefix_ms": {"n": 30, "p50": 175.439, "p95": 182.538, "mean": 176.119},
+      "suffix_ms": {"n": 30, "p50": 174.796, "p95": 183.026, "mean": 175.845}
+    },
+    "24": {
+      "wall_ms": {"n": 30, "p50": 333.959, "p95": 347.24, "mean": 334.824},
+      "prefix_ms": {"n": 30, "p50": 161.186, "p95": 168.632, "mean": 160.431},
+      "suffix_ms": {"n": 30, "p50": 149.851, "p95": 153.784, "mean": 149.825},
+      "speedup": 1.1249,
+      "max_probability_delta": 0.20734202,
+      "max_z_delta": 9.38787777,
+      "decisions_equal": true,
+      "advances": false
+    },
+    "20": {
+      "wall_ms": {"n": 30, "p50": 293.957, "p95": 305.492, "mean": 293.949},
+      "prefix_ms": {"n": 30, "p50": 145.005, "p95": 152.579, "mean": 144.458},
+      "suffix_ms": {"n": 30, "p50": 124.976, "p95": 130.595, "mean": 125.723},
+      "speedup": 1.2779,
+      "max_probability_delta": 0.99554302,
+      "max_z_delta": 18.78862862,
+      "decisions_equal": false,
+      "changed_decisions": ["dog:text", "invoice:photo", "receipt:content", "receipt:photo"],
+      "advances": false
+    }
+  },
+  "selected": 28
+}

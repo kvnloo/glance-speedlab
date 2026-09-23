@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090a0c" />
+    <title>Glance Speedlab · Browser Experiments</title>
+    <style>
+      :root { color: #eef1ea; background: #090a0c; font-family: Inter, system-ui, sans-serif; }
+      body { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+      h1 { font-size: clamp(36px, 7vw, 70px); letter-spacing: -.06em; margin: 0; }
+      h1 em { color: #c7ff62; font-style: normal; }
+      p { color: #9aa198; line-height: 1.6; }
+      button { border: 0; border-radius: 999px; background: #c7ff62; color: #090a0c; padding: 13px 20px; font-weight: 750; cursor: pointer; }
+      button:disabled { opacity: .5; cursor: wait; }
+      #status { font-family: ui-monospace, monospace; color: #c7ff62; min-height: 24px; }
+      pre { background: #111315; border: 1px solid #252927; border-radius: 12px; padding: 18px; overflow: auto; font-size: 11px; line-height: 1.5; }
+      a { color: #c7ff62; }
+    </style>
+  </head>
+  <body>
+    <p><a href="/">← Live lab</a></p>
+    <p>DETERMINISTIC · LOCAL · NO CAMERA</p>
+    <h1>Browser <em>experiments.</em></h1>
+    <p>E004, E005, and E007 run against synthetic frames in this browser. Results are written to the ignored local research run directory; no pixels leave the page.</p>
+    <button id="run">Run experiments</button>
+    <p id="status">ready</p>
+    <pre id="results">No results yet.</pre>
+    <script type="module" src="/lab.ts"></script>
+  </body>
+</html>

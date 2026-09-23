@@ -1,0 +1,42 @@
+{
+  "name": "glance-speedlab",
+  "version": "0.1.0",
+  "description": "A local-first research harness for low-latency live-camera Glance inference.",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoheinakajima/glance-speedlab.git"
+  },
+  "homepage": "https://glance.yohei.me/speed/",
+  "bugs": {
+    "url": "https://github.com/yoheinakajima/glance-speedlab/issues"
+  },
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch src/server/index.mjs",
+    "dev:web": "vite --host 127.0.0.1",
+    "start": "node --env-file-if-exists=.env src/server/index.mjs --static",
+    "launch": "node scripts/launch.mjs",
+    "launch:2b": "node scripts/launch.mjs --tier 2b --tokens 128 --suffix-batch 16",
+    "launch:4b": "node scripts/launch.mjs --tier 4b --tokens 128 --suffix-batch 16",
+    "launch:mlx": "node scripts/launch.mjs --mlx --tier 2b --tokens 128 --suffix-batch 16",
+    "mlx:serve": "research/runs/e013-venv/bin/python src/mlx_backend/server.py",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test",
+    "check": "pnpm test && pnpm check:docs && pnpm build",
+    "check:docs": "node scripts/check-docs.mjs",
+    "bench": "node scripts/bench.mjs",
+    "experiment:new": "node scripts/new-experiment.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "typescript": "~5.9.3",
+    "vite": "^7.1.7"
+  }
+}

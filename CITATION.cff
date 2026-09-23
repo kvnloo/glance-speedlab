@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use Glance Speedlab or its experimental results, please cite this software and technical report."
+title: "Glance Speedlab: A Measurement-First Laboratory for Low-Latency Live-Camera VLM Inference"
+type: software
+version: 0.1.0
+date-released: 2026-09-23
+authors:
+  - family-names: Nakajima
+    given-names: Yohei
+license: MIT
+repository-code: "https://github.com/yoheinakajima/glance-speedlab"
+url: "https://glance.yohei.me/speed/"
+keywords:
+  - vision-language models
+  - latency
+  - Apple Silicon
+  - live camera
+  - reproducibility
+preferred-citation:
+  type: report
+  title: "What Actually Makes a Local Camera VLM Faster? A Measurement-First Study of Glance on Apple Silicon"
+  authors:
+    - family-names: Nakajima
+      given-names: Yohei
+  year: 2026

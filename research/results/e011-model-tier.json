@@ -1,0 +1,104 @@
+{
+  "environment": {
+    "apple_8gb": {
+      "timestamp": "2026-09-23T14:41:41Z",
+      "glance_commit": "3b5205429e153e3c206503409a9e9d5c2f20ee73",
+      "tier": "apple_8gb",
+      "model": "Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203",
+      "image_token_budget": 384,
+      "device": "mps",
+      "dtype": "float16"
+    },
+    "apple_32gb": {
+      "timestamp": "2026-09-23T14:42:26Z",
+      "glance_commit": "3b5205429e153e3c206503409a9e9d5c2f20ee73",
+      "tier": "apple_32gb",
+      "model": "Qwen/Qwen3-VL-4B-Instruct@ebb281ec70b05090aa6165b016eac8ec08e71b17",
+      "image_token_budget": 384,
+      "device": "mps",
+      "dtype": "float16"
+    }
+  },
+  "summary": {
+    "E011": {
+      "apple_8gb": {
+        "model": "Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203",
+        "wall_ms": {
+          "n": 21,
+          "p50": 266.958,
+          "p95": 280.208,
+          "mean": 269.343
+        },
+        "model_total_ms": {
+          "n": 21,
+          "p50": 266.0,
+          "p95": 280.0,
+          "mean": 268.476
+        },
+        "prefix_ms": {
+          "n": 21,
+          "p50": 121.0,
+          "p95": 130.0,
+          "mean": 122.095
+        },
+        "score_ms": {
+          "n": 21,
+          "p50": 146.0,
+          "p95": 149.0,
+          "mean": 145.762
+        },
+        "image_tokens": {
+          "n": 21,
+          "p50": 77.0,
+          "p95": 80.0,
+          "mean": 75.667
+        }
+      },
+      "apple_32gb": {
+        "model": "Qwen/Qwen3-VL-4B-Instruct@ebb281ec70b05090aa6165b016eac8ec08e71b17",
+        "wall_ms": {
+          "n": 21,
+          "p50": 799.352,
+          "p95": 823.433,
+          "mean": 801.334
+        },
+        "model_total_ms": {
+          "n": 21,
+          "p50": 799.0,
+          "p95": 823.0,
+          "mean": 800.333
+        },
+        "prefix_ms": {
+          "n": 21,
+          "p50": 296.0,
+          "p95": 313.0,
+          "mean": 299.095
+        },
+        "score_ms": {
+          "n": 21,
+          "p50": 498.0,
+          "p95": 513.0,
+          "mean": 500.381
+        },
+        "image_tokens": {
+          "n": 21,
+          "p50": 77.0,
+          "p95": 80.0,
+          "mean": 75.667
+        }
+      },
+      "speedup_2b_vs_4b": 2.9943,
+      "guardrail": {
+        "request_decision_agreement": 0.333333,
+        "question_decision_agreement": 0.833333,
+        "question_agreement_by_image": {
+          "dog": 0.75,
+          "receipt": 1.0,
+          "invoice": 0.75
+        },
+        "max_probability_delta": 0.746114,
+        "passed": false
+      }
+    }
+  }
+}

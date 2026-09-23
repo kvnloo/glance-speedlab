@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "experiment": "E015",
+  "hardware": "Apple M5, 10-core GPU, 32 GB unified memory",
+  "model": "Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203",
+  "configuration": {
+    "dtype": "float16",
+    "device": "mps",
+    "image_token_budget": 128,
+    "suffix_batch_size": 16,
+    "warmup_pairs": 2,
+    "measured_pairs_per_image": 10,
+    "prefix_cache_hits": true
+  },
+  "nine_statements": {
+    "reference_score_ms": {"n": 30, "p50": 179.0, "p95": 185.0, "mean": 180.267},
+    "selected_score_ms": {"n": 30, "p50": 172.0, "p95": 179.0, "mean": 172.633},
+    "speedup": 1.0407,
+    "latency_reduction_percent": 3.9
+  },
+  "four_statements": {
+    "reference_score_ms": {"n": 10, "p50": 91.0, "p95": 123.0, "mean": 94.5},
+    "selected_score_ms": {"n": 10, "p50": 84.0, "p95": 100.0, "mean": 85.9},
+    "speedup": 1.0833,
+    "latency_reduction_percent": 7.7
+  },
+  "guardrail": {
+    "decisions_equal": true,
+    "max_probability_delta": 0.0,
+    "max_z_delta": 0.0,
+    "diagnostic_shape_valid": true,
+    "passed": true
+  },
+  "keep_fast_path": false
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "experiment": "E013",
+  "timestamp": "2026-09-23T15:37:45Z",
+  "environment": {
+    "hardware": "Apple M5, 32 GB unified memory",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.15",
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.7.2 from b5952d7c97da3cfc5014ff0a81bfe2e59d919cab",
+    "candidate_model": "mlx-community/Qwen3-VL-2B-Instruct-4bit@9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+    "candidate_load_ms": 512.301,
+    "candidate_peak_memory_gb_p50": 2.038,
+    "candidate_checkpoint_disk_gb": 3.3,
+    "candidate_environment_disk_gb": 1.4,
+    "baseline_model": "Qwen/Qwen3-VL-2B-Instruct@89644892e4d85e24eaac8bacfd4f463576704203",
+    "baseline_device": "mps",
+    "baseline_dtype": "float16",
+    "baseline_image_token_budget": 128,
+    "baseline_prefix_cache": true
+  },
+  "protocol": {
+    "images": ["dog-320-q60.jpg", "receipt-320-q60.jpg", "invoice-320-q60.jpg"],
+    "warmups_per_image": 2,
+    "measured_repeats_per_image": 5,
+    "measured_samples_per_arm": 15,
+    "new_frame_control": "Unique JPEG COM metadata changed the original-byte SHA-256 without changing decoded pixels.",
+    "known_mismatch": "Glance directly scores four choice statements; MLX greedily generates a 2-3 token label."
+  },
+  "summary": {
+    "glance_mps_fp16_cache_hit": {
+      "elapsed_ms": {"n": 15, "min": 78.703, "p50": 79.625, "p95": 81.231, "max": 81.231, "mean": 79.64},
+      "model_prefix_ms_p50": 0.0,
+      "model_score_ms_p50": 77.0,
+      "guardrail_passed": true
+    },
+    "glance_mps_fp16_new_frame": {
+      "elapsed_ms": {"n": 15, "min": 201.298, "p50": 204.207, "p95": 208.057, "max": 208.057, "mean": 204.2},
+      "model_prefix_ms_p50": 125.0,
+      "model_score_ms_p50": 77.0,
+      "guardrail_passed": true
+    },
+    "mlx_4bit": {
+      "elapsed_ms": {"n": 15, "min": 142.251, "p50": 144.134, "p95": 150.127, "max": 150.127, "mean": 145.639},
+      "prompt_tokens_p50": 108,
+      "prompt_tokens_range": [101, 111],
+      "prompt_tps_p50": 861.394,
+      "generation_tps_p50": 207.855,
+      "guardrail_passed": true
+    },
+    "mlx_speedup_vs_new_frame": 1.4168,
+    "mlx_latency_reduction_vs_new_frame_percent": 29.4,
+    "mlx_slowdown_vs_cache_hit": 1.81
+  },
+  "guardrail": {
+    "expected": {"dog": "animal photo", "receipt": "receipt", "invoice": "invoice"},
+    "all_arms_exact_coarse_label_agreement": true,
+    "probability_parity_measured": false
+  }
+}

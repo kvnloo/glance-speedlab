@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "experiment": "E014",
+  "timestamp": "2026-09-23T16:11:55Z",
+  "environment": {
+    "hardware": "Apple M5, 32 GB unified memory",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.15",
+    "mlx": "0.32.2",
+    "mlx_vlm": "0.7.2 from b5952d7c97da3cfc5014ff0a81bfe2e59d919cab",
+    "model": "mlx-community/Qwen3-VL-2B-Instruct-4bit@9c4f5209e57b31f4b9dfba735de3fb983739c9cc"
+  },
+  "protocol": {
+    "image": "dog-320-q60.jpg",
+    "warmups": 2,
+    "measured_repeats": 10,
+    "exact_image_and_prompt_repeated": true,
+    "continued_chat_uses_explicit_first_turn_image_marker": true
+  },
+  "standalone_summary": {
+    "none": {
+      "elapsed_ms": {"n": 10, "min": 196.949, "p50": 199.879, "p95": 206.035, "max": 206.035, "mean": 200.528},
+      "cached_tokens": [0]
+    },
+    "vision": {
+      "elapsed_ms": {"n": 10, "min": 196.464, "p50": 201.379, "p95": 205.29, "max": 205.29, "mean": 201.07},
+      "cached_tokens": [0],
+      "vision_cache_entries": [0],
+      "latency_reduction_percent": -0.8
+    },
+    "vision_prompt": {
+      "elapsed_ms": {"n": 10, "min": 193.389, "p50": 199.302, "p95": 205.844, "max": 205.844, "mean": 199.381},
+      "cached_tokens": [0],
+      "vision_cache_entries": [0],
+      "latency_reduction_percent": 0.3
+    },
+    "apc_block16": {
+      "elapsed_ms": {"n": 10, "min": 240.686, "p50": 246.044, "p95": 252.009, "max": 252.009, "mean": 246.392},
+      "cached_tokens": [0],
+      "latency_reduction_percent": -23.1,
+      "internal_matched_tokens": 1056,
+      "restored_tokens": 0
+    },
+    "apc_block4": {
+      "elapsed_ms": {"n": 10, "min": 238.84, "p50": 244.082, "p95": 255.29, "max": 255.29, "mean": 245.254},
+      "cached_tokens": [0],
+      "latency_reduction_percent": -22.1,
+      "internal_matched_tokens": 1100,
+      "restored_tokens": 0
+    }
+  },
+  "continued_chat_summary": {
+    "cold": {
+      "elapsed_ms": {"n": 10, "min": 185.791, "p50": 188.364, "p95": 197.755, "max": 197.755, "mean": 189.687},
+      "cached_tokens": [0]
+    },
+    "prompt_cache": {
+      "elapsed_ms": {"n": 10, "min": 89.133, "p50": 91.957, "p95": 96.319, "max": 96.319, "mean": 92.367},
+      "cached_tokens": [104],
+      "speedup_vs_cold": 2.0484,
+      "latency_reduction_percent": 51.2
+    }
+  },
+  "guardrail": {
+    "standalone_outputs": ["animal photo"],
+    "continued_chat_outputs": ["yes"],
+    "passed": true
+  }
+}

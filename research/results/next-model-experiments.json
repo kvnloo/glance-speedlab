@@ -1,0 +1,630 @@
+{
+  "environment": {
+    "timestamp": "2026-09-23T14:39:25Z",
+    "hardware": "Apple M5, 32 GB unified memory",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.15",
+    "glance_commit": "3b5205429e153e3c206503409a9e9d5c2f20ee73",
+    "model": "Qwen/Qwen3-VL-4B-Instruct@ebb281ec70b05090aa6165b016eac8ec08e71b17",
+    "device": "mps",
+    "dtype": "float16",
+    "prefix_cache": true,
+    "images": {
+      "dog": {
+        "source": "derived from samples/dog.jpg at 320 px, JPEG q60",
+        "sha256": "d64564b69615fcb7daec538f8c722b2d93c48442c96532fcc4b16a2de337d8ff"
+      },
+      "receipt": {
+        "source": "derived from samples/receipt.jpg at 320 px, JPEG q60",
+        "sha256": "e27e9fcef089c9a667d74548b874e03407d6d96ff8aa2e039129b6888bf10746"
+      },
+      "invoice": {
+        "source": "derived from samples/invoice.jpg at 320 px, JPEG q60",
+        "sha256": "e98ca83430a979892c7b2dcad880b8d95333dadc1ad44f10b681b501c9fcea01"
+      }
+    }
+  },
+  "summary": {
+    "E008": {
+      "128": {
+        "wall_ms": {
+          "n": 21,
+          "min": 788.326,
+          "p50": 802.338,
+          "p95": 811.094,
+          "max": 812.558,
+          "mean": 800.447
+        },
+        "model_total_ms": {
+          "n": 21,
+          "min": 787.0,
+          "p50": 801.0,
+          "p95": 809.0,
+          "max": 811.0,
+          "mean": 798.476
+        },
+        "prefix_ms": {
+          "n": 21,
+          "min": 290.0,
+          "p50": 299.0,
+          "p95": 301.0,
+          "max": 303.0,
+          "mean": 297.714
+        },
+        "score_ms": {
+          "n": 21,
+          "min": 494.0,
+          "p50": 501.0,
+          "p95": 508.0,
+          "max": 510.0,
+          "mean": 499.952
+        },
+        "image_tokens": {
+          "n": 21,
+          "min": 70.0,
+          "p50": 77.0,
+          "p95": 80.0,
+          "max": 80.0,
+          "mean": 75.667
+        },
+        "forward_passes": {
+          "n": 21,
+          "min": 9.0,
+          "p50": 9.0,
+          "p95": 9.0,
+          "max": 9.0,
+          "mean": 9.0
+        }
+      },
+      "192": {
+        "wall_ms": {
+          "n": 21,
+          "min": 790.014,
+          "p50": 805.004,
+          "p95": 815.105,
+          "max": 828.109,
+          "mean": 804.39
+        },
+        "model_total_ms": {
+          "n": 21,
+          "min": 788.0,
+          "p50": 803.0,
+          "p95": 813.0,
+          "max": 827.0,
+          "mean": 802.048
+        },
+        "prefix_ms": {
+          "n": 21,
+          "min": 292.0,
+          "p50": 299.0,
+          "p95": 311.0,
+          "max": 324.0,
+          "mean": 300.0
+        },
+        "score_ms": {
+          "n": 21,
+          "min": 495.0,
+          "p50": 501.0,
+          "p95": 509.0,
+          "max": 509.0,
+          "mean": 501.143
+        },
+        "image_tokens": {
+          "n": 21,
+          "min": 70.0,
+          "p50": 77.0,
+          "p95": 80.0,
+          "max": 80.0,
+          "mean": 75.667
+        },
+        "forward_passes": {
+          "n": 21,
+          "min": 9.0,
+          "p50": 9.0,
+          "p95": 9.0,
+          "max": 9.0,
+          "mean": 9.0
+        }
+      },
+      "256": {
+        "wall_ms": {
+          "n": 21,
+          "min": 791.297,
+          "p50": 802.47,
+          "p95": 827.005,
+          "max": 837.776,
+          "mean": 803.59
+        },
+        "model_total_ms": {
+          "n": 21,
+          "min": 791.0,
+          "p50": 801.0,
+          "p95": 822.0,
+          "max": 836.0,
+          "mean": 801.619
+        },
+        "prefix_ms": {
+          "n": 21,
+          "min": 292.0,
+          "p50": 297.0,
+          "p95": 317.0,
+          "max": 325.0,
+          "mean": 300.048
+        },
+        "score_ms": {
+          "n": 21,
+          "min": 494.0,
+          "p50": 500.0,
+          "p95": 509.0,
+          "max": 509.0,
+          "mean": 500.714
+        },
+        "image_tokens": {
+          "n": 21,
+          "min": 70.0,
+          "p50": 77.0,
+          "p95": 80.0,
+          "max": 80.0,
+          "mean": 75.667
+        },
+        "forward_passes": {
+          "n": 21,
+          "min": 9.0,
+          "p50": 9.0,
+          "p95": 9.0,
+          "max": 9.0,
+          "mean": 9.0
+        }
+      },
+      "768": {
+        "wall_ms": {
+          "n": 21,
+          "min": 785.079,
+          "p50": 799.734,
+          "p95": 810.182,
+          "max": 817.973,
+          "mean": 799.827
+        },
+        "model_total_ms": {
+          "n": 21,
+          "min": 784.0,
+          "p50": 798.0,
+          "p95": 807.0,
+          "max": 813.0,
+          "mean": 797.714
+        },
+        "prefix_ms": {
+          "n": 21,
+          "min": 289.0,
+          "p50": 296.0,
+          "p95": 302.0,
+          "max": 306.0,
+          "mean": 296.619
+        },
+        "score_ms": {
+          "n": 21,
+          "min": 492.0,
+          "p50": 500.0,
+          "p95": 506.0,
+          "max": 509.0,
+          "mean": 500.048
+        },
+        "image_tokens": {
+          "n": 21,
+          "min": 70.0,
+          "p50": 77.0,
+          "p95": 80.0,
+          "max": 80.0,
+          "mean": 75.667
+        },
+        "forward_passes": {
+          "n": 21,
+          "min": 9.0,
+          "p50": 9.0,
+          "p95": 9.0,
+          "max": 9.0,
+          "mean": 9.0
+        }
+      },
+      "guardrail_128_vs_768": {
+        "decision_agreement": 1.0,
+        "max_probability_delta": 0.0,
+        "passed": true
+      },
+      "speedup_128_vs_768": 0.9968,
+      "guardrail_192_vs_768": {
+        "decision_agreement": 1.0,
+        "max_probability_delta": 0.0,
+        "passed": true
+      },
+      "speedup_192_vs_768": 0.9935,
+      "guardrail_256_vs_768": {
+        "decision_agreement": 1.0,
+        "max_probability_delta": 0.0,
+        "passed": true
+      },
+      "speedup_256_vs_768": 0.9966
+    },
+    "E009": {
+      "16": {
+        "wall_ms": {
+          "n": 10,
+          "min": 800.217,
+          "p50": 805.364,
+          "p95": 815.482,
+          "max": 815.482,
+          "mean": 806.51
+        },
+        "model_total_ms": {
+          "n": 10,
+          "min": 798.0,
+          "p50": 803.0,
+          "p95": 813.0,
+          "max": 813.0,
+          "mean": 803.7
+        },
+        "prefix_ms": {
+          "n": 10,
+          "min": 289.0,
+          "p50": 295.0,
+          "p95": 298.0,
+          "max": 298.0,
+          "mean": 294.6
+        },
+        "score_ms": {
+          "n": 10,
+          "min": 503.0,
+          "p50": 506.5,
+          "p95": 523.0,
+          "max": 523.0,
+          "mean": 508.3
+        },
+        "image_tokens": {
+          "n": 10,
+          "min": 70.0,
+          "p50": 70.0,
+          "p95": 70.0,
+          "max": 70.0,
+          "mean": 70.0
+        },
+        "forward_passes": {
+          "n": 10,
+          "min": 9.0,
+          "p50": 9.0,
+          "p95": 9.0,
+          "max": 9.0,
+          "mean": 9.0
+        }
+      },
+      "32": {
+        "wall_ms": {
+          "n": 10,
+          "min": 799.172,
+          "p50": 802.722,
+          "p95": 814.854,
+          "max": 814.854,
+          "mean": 804.664
+        },
+        "model_total_ms": {
+          "n": 10,
+          "min": 797.0,
+          "p50": 800.5,
+          "p95": 814.0,
+          "max": 814.0,
+          "mean": 802.8
+        },
+        "prefix_ms": {
+          "n": 10,
+          "min": 292.0,
+          "p50": 294.5,
+          "p95": 299.0,
+          "max": 299.0,
+          "mean": 294.9
+        },
+        "score_ms": {
+          "n": 10,
+          "min": 502.0,
+          "p50": 507.0,
+          "p95": 515.0,
+          "max": 515.0,
+          "mean": 507.3
+        },
+        "image_tokens": {
+          "n": 10,
+          "min": 70.0,
+          "p50": 70.0,
+          "p95": 70.0,
+          "max": 70.0,
+          "mean": 70.0
+        },
+        "forward_passes": {
+          "n": 10,
+          "min": 9.0,
+          "p50": 9.0,
+          "p95": 9.0,
+          "max": 9.0,
+          "mean": 9.0
+        }
+      },
+      "4": {
+        "wall_ms": {
+          "n": 10,
+          "min": 1014.026,
+          "p50": 1024.306,
+          "p95": 1054.163,
+          "max": 1054.163,
+          "mean": 1027.674
+        },
+        "model_total_ms": {
+          "n": 10,
+          "min": 1012.0,
+          "p50": 1023.0,
+          "p95": 1052.0,
+          "max": 1052.0,
+          "mean": 1025.6
+        },
+        "prefix_ms": {
+          "n": 10,
+          "min": 291.0,
+          "p50": 294.5,
+          "p95": 297.0,
+          "max": 297.0,
+          "mean": 294.2
+        },
+        "score_ms": {
+          "n": 10,
+          "min": 720.0,
+          "p50": 725.5,
+          "p95": 758.0,
+          "max": 758.0,
+          "mean": 729.3
+        },
+        "image_tokens": {
+          "n": 10,
+          "min": 70.0,
+          "p50": 70.0,
+          "p95": 70.0,
+          "max": 70.0,
+          "mean": 70.0
+        },
+        "forward_passes": {
+          "n": 10,
+          "min": 9.0,
+          "p50": 9.0,
+          "p95": 9.0,
+          "max": 9.0,
+          "mean": 9.0
+        }
+      },
+      "8": {
+        "wall_ms": {
+          "n": 10,
+          "min": 953.346,
+          "p50": 960.024,
+          "p95": 989.639,
+          "max": 989.639,
+          "mean": 963.305
+        },
+        "model_total_ms": {
+          "n": 10,
+          "min": 951.0,
+          "p50": 958.5,
+          "p95": 988.0,
+          "max": 988.0,
+          "mean": 961.0
+        },
+        "prefix_ms": {
+          "n": 10,
+          "min": 292.0,
+          "p50": 296.0,
+          "p95": 311.0,
+          "max": 311.0,
+          "mean": 297.4
+        },
+        "score_ms": {
+          "n": 10,
+          "min": 655.0,
+          "p50": 661.5,
+          "p95": 676.0,
+          "max": 676.0,
+          "mean": 662.7
+        },
+        "image_tokens": {
+          "n": 10,
+          "min": 70.0,
+          "p50": 70.0,
+          "p95": 70.0,
+          "max": 70.0,
+          "mean": 70.0
+        },
+        "forward_passes": {
+          "n": 10,
+          "min": 9.0,
+          "p50": 9.0,
+          "p95": 9.0,
+          "max": 9.0,
+          "mean": 9.0
+        }
+      },
+      "guardrail_4_vs_16": {
+        "decision_agreement": 1.0,
+        "max_probability_delta": 0.000324,
+        "passed": true
+      },
+      "guardrail_8_vs_16": {
+        "decision_agreement": 1.0,
+        "max_probability_delta": 5.1e-05,
+        "passed": true
+      },
+      "guardrail_32_vs_16": {
+        "decision_agreement": 1.0,
+        "max_probability_delta": 0.0,
+        "passed": true
+      }
+    },
+    "E010": {
+      "independent": {
+        "wall_ms": {
+          "n": 21,
+          "min": 416.285,
+          "p50": 624.162,
+          "p95": 664.528,
+          "max": 678.388,
+          "mean": 611.933
+        },
+        "model_total_ms": {
+          "n": 21,
+          "min": 414.0,
+          "p50": 622.0,
+          "p95": 663.0,
+          "max": 676.0,
+          "mean": 609.571
+        },
+        "prefix_ms": {
+          "n": 21,
+          "min": 202.0,
+          "p50": 297.0,
+          "p95": 323.0,
+          "max": 330.0,
+          "mean": 292.667
+        },
+        "score_ms": {
+          "n": 21,
+          "min": 212.0,
+          "p50": 322.0,
+          "p95": 344.0,
+          "max": 353.0,
+          "mean": 316.095
+        },
+        "image_tokens": {
+          "n": 21,
+          "min": 70.0,
+          "p50": 77.0,
+          "p95": 80.0,
+          "max": 80.0,
+          "mean": 75.667
+        },
+        "forward_passes": {
+          "n": 21,
+          "min": 7.0,
+          "p50": 7.0,
+          "p95": 7.0,
+          "max": 7.0,
+          "mean": 7.0
+        }
+      },
+      "letter1": {
+        "wall_ms": {
+          "n": 21,
+          "min": 431.203,
+          "p50": 641.184,
+          "p95": 662.124,
+          "max": 717.916,
+          "mean": 620.021
+        },
+        "model_total_ms": {
+          "n": 21,
+          "min": 429.0,
+          "p50": 639.0,
+          "p95": 661.0,
+          "max": 715.0,
+          "mean": 617.476
+        },
+        "prefix_ms": {
+          "n": 21,
+          "min": 229.0,
+          "p50": 338.0,
+          "p95": 357.0,
+          "max": 358.0,
+          "mean": 323.857
+        },
+        "score_ms": {
+          "n": 21,
+          "min": 199.0,
+          "p50": 300.0,
+          "p95": 311.0,
+          "max": 321.0,
+          "mean": 290.81
+        },
+        "image_tokens": {
+          "n": 21,
+          "min": 70.0,
+          "p50": 77.0,
+          "p95": 80.0,
+          "max": 80.0,
+          "mean": 75.667
+        },
+        "forward_passes": {
+          "n": 21,
+          "min": 2.0,
+          "p50": 2.0,
+          "p95": 2.0,
+          "max": 2.0,
+          "mean": 2.0
+        }
+      },
+      "letter4": {
+        "wall_ms": {
+          "n": 21,
+          "min": 537.525,
+          "p50": 802.138,
+          "p95": 844.541,
+          "max": 847.616,
+          "mean": 777.85
+        },
+        "model_total_ms": {
+          "n": 21,
+          "min": 536.0,
+          "p50": 800.0,
+          "p95": 842.0,
+          "max": 845.0,
+          "mean": 775.667
+        },
+        "prefix_ms": {
+          "n": 21,
+          "min": 205.0,
+          "p50": 304.0,
+          "p95": 325.0,
+          "max": 332.0,
+          "mean": 296.333
+        },
+        "score_ms": {
+          "n": 21,
+          "min": 329.0,
+          "p50": 496.0,
+          "p95": 516.0,
+          "max": 526.0,
+          "mean": 478.095
+        },
+        "image_tokens": {
+          "n": 21,
+          "min": 70.0,
+          "p50": 77.0,
+          "p95": 80.0,
+          "max": 80.0,
+          "mean": 75.667
+        },
+        "forward_passes": {
+          "n": 21,
+          "min": 7.0,
+          "p50": 7.0,
+          "p95": 7.0,
+          "max": 7.0,
+          "mean": 7.0
+        }
+      },
+      "guardrail_letter1_vs_independent": {
+        "decision_agreement": 1.0,
+        "max_probability_delta": 0.31773,
+        "passed": false
+      },
+      "speedup_letter1_vs_independent": 0.9735,
+      "guardrail_letter4_vs_independent": {
+        "decision_agreement": 0.666667,
+        "max_probability_delta": 0.719556,
+        "passed": false
+      },
+      "speedup_letter4_vs_independent": 0.7781
+    }
+  }
+}
