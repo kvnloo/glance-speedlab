@@ -72,7 +72,7 @@ export class LiveRunner {
             backend: this.options.getBackend(),
             choiceMethod: this.options.getChoiceMethod(),
             sessionId: this.options.sessionId,
-            client: { ...frame, imageBase64: undefined, ...this.options.getConfig() },
+            client: { ...frame, imageBase64: undefined, capturedAt: undefined, ...this.options.getConfig() },
           }),
         });
         const requestMs = performance.now() - requestStartedAt;
@@ -83,6 +83,7 @@ export class LiveRunner {
         const sample: Sample = {
           sequence: this.#sequence,
           at: Date.now(),
+          capturedAt: frame.capturedAt,
           loopMs: performance.now() - loopStartedAt,
           requestMs,
           capture: {
